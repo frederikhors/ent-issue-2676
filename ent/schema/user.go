@@ -15,10 +15,11 @@ func (User) Fields() []ent.Field {
 	return []ent.Field{
 		field.Int("age"),
 		field.String("name"),
+		field.String("team_id"),
 	}
 }
 
 // Edges of the User.
 func (User) Edges() []ent.Edge {
-	return nil
+	edge.To("team", Team.Type).Field("team_id").Unique().Required(),
 }
