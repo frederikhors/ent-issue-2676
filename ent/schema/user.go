@@ -2,6 +2,7 @@ package schema
 
 import (
 	"entgo.io/ent"
+	"entgo.io/ent/schema/edge"
 	"entgo.io/ent/schema/field"
 )
 
@@ -15,11 +16,13 @@ func (User) Fields() []ent.Field {
 	return []ent.Field{
 		field.Int("age"),
 		field.String("name"),
-		field.String("team_id"),
+		field.Int("team_id"),
 	}
 }
 
 // Edges of the User.
 func (User) Edges() []ent.Edge {
-	edge.To("team", Team.Type).Field("team_id").Unique().Required(),
+	return []ent.Edge{
+		edge.To("team", Team.Type).Field("team_id").Unique().Required(),
+	}
 }

@@ -16,8 +16,3 @@ func (Team) Fields() []ent.Field {
 		field.String("name"),
 	}
 }
-
-// Edges of the Team.
-func (Team) Edges() []ent.Edge {
-	return nil
-}
