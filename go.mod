@@ -3,12 +3,12 @@ module entgo.io/bug
 go 1.18
 
 require (
-	entgo.io/ent v0.10.2-0.20220614093246-195be2d98d88
+	entgo.io/ent v0.10.2-0.20220622152053-3bb5292c83bf
 	github.com/lib/pq v1.10.5
 )
 
 require (
-	ariga.io/atlas v0.4.2-0.20220601084524-93e29909973c // indirect
+	ariga.io/atlas v0.4.3-0.20220618160942-1080fa97c763 // indirect
 	github.com/agext/levenshtein v1.2.1 // indirect
 	github.com/apparentlymart/go-textseg/v13 v13.0.0 // indirect
 	github.com/go-openapi/inflect v0.19.0 // indirect
